@@ -1,3 +1,5 @@
+## WARNING: the code below is generally unreadable.
+
 #Problem 2
 > 
 > #a
@@ -6,11 +8,16 @@
 > date<-c('03Mon18','04Tue18','05Wed18','04Thu18','05Fri18','06Sat18','07Sun18')
 > 
 > #b
+## Wrong: the question asks about the difference, not the absolute difference
+
+## Use informative names, the meaning of DELTA_COST is unclear!
 > DELTA_COST<-abs(xmax-xmin)
 > DELTA_COST
 [1] 2.0 2.3 3.0 7.0 6.0 3.0 5.9
 > 
 > #c
+## WARNING: including unnecessary code will lead to score reduction.
+
 > xmax
 [1] 25.0 22.8 31.2 27.3 28.4 20.2 24.1
 > totalxmax<-sum(xmax)
@@ -28,8 +35,9 @@
 > avgxmin
 [1] 21.4
 > 
+
 > #d
-> names(xmin)<-date
+> names(xmin) <- date
 > xmin[c('04Tue18','04Thu18','06Sat18','07Sun18')]
 04Tue18 04Thu18 06Sat18 07Sun18 
    20.5    20.3    17.2    18.2 
@@ -67,9 +75,14 @@ xmin_name<-xmin
    25.0    22.8    31.2    27.3      NA    20.2    24.1 
 > 
 > #g
+## This is unnecessary!
 > xmin_name<-"xmin"
 > xmax_name<-"xmax"
+
+## The following line was all that the problem is asking for.
 > temperatures<-data.frame(xmin,xmax)
+
+## Also unnecessary
 > names(temperatures)<-c(xmin_name,xmax_name)
 > print(temperatures)
         xmin xmax
@@ -82,9 +95,14 @@ xmin_name<-xmin
 07Sun18 18.2 24.1
 > 
 > #h
+# Writing a function was not necessary!
+
 > celsius=c(23.0,20.5,28.2,20.3,22.4,17.2,18.2)
 > toFahrenheit=function(celsius){f=(9/5)*celsius+32;return(f);}
 > toFahrenheit(celsius)
+
+## It is not immediately clear what celsius refers to!
+
 [1] 73.40 68.90 82.76 68.54 72.32 62.96 64.76
 > temperatures["xminFahrenheit"]<-toFahrenheit(celsius)
 > temperatures
