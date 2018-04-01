@@ -1,1 +1,25 @@
-
+#Problem 1
+#a
+x<-c(4,1,1,4)
+#b
+y<-c(1,4)
+#c
+DELTA_COST<-(x-y)
+DELTA_COST
+mean(DELTA_COST)
+#d
+all<-c(x,y)
+all
+s<-c(4,1,1,4,1,4)
+names(s)<-c(4,1,1,4,1,4)
+names(s)
+#e
+rep(c(4,1,1,4,1,4),times=10)
+length(s)
+#f
+rep(c(4,1,1,4,1,4),each=3)
+#g
+s<-7:21
+s
+#h
+length(s<-7:21)
